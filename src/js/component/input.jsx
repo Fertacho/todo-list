@@ -3,7 +3,10 @@ import React from "react";
 const Input = () => {
 	return (
 		<div className="contenedor">
-			<input className="listwrite" placeholder="Agregar tarea"></input>
+			<input id="myInput" placeholder="Agregar tarea"></input>
+			<button onclick="Item()" class="addBtn">
+				agregar
+			</button>
 		</div>
 	);
 };
