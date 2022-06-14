@@ -1,7 +1,8 @@
 import React from "react";
 
-const Item = () => {
-	return <div className="contenedor"></div>;
-};
+function AddItem() {
+	const [Task, setTask] = useState("");
+	return <ul className="myUL"></ul>;
+}
 
-export default Item;
+export default AddItem;
