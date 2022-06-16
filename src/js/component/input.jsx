@@ -6,14 +6,21 @@ const Input = () => {
 	const { Task, setTask } = useState([]);
 	return (
 		<div className="contenedor">
-			<input
-				id="myInput"
-				placeholder="Agregar tarea"
-				onChange={() => setinputValue(e.target.value)}
-				value={inputValue}></input>
-			<button onClick={() => setTask("blue")} className="myBtn">
-				agregar
-			</button>
+			<ul>
+				<li>
+					<input
+						id="myInput"
+						placeholder="Agregar tarea"
+						onChange={() => setinputValue(e.target.value)}
+						value={inputValue}
+						onKeyPress={(e) => {
+							if (e.Key == "Enter") {
+								setTask(Task.concat(inputValue));
+								setinputValue("");
+							}
+						}}></input>
+				</li>
+			</ul>
 		</div>
 	);
 };

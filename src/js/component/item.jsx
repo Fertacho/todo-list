@@ -5,9 +5,8 @@ function AddItem() {
 	return (
 		<div>
 			<h1>Tareas por hacer</h1>
-			<Input />
 			<ul>
-				<li></li>
+				<Input />
 			</ul>
 		</div>
 	);
