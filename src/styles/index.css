@@ -1,5 +1,10 @@
 .contenedor {
     background-color: yellow;
 }
-.listwrite {
+.myBtn:hover {
+    background-color: grey;
+    
+}
+.myBtn:active {
+    background-color: aliceblue;
 }

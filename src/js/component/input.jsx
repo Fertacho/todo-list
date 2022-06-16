@@ -2,14 +2,18 @@ import React from "react";
 import { useState } from "react";
 
 const Input = () => {
-	const { Task, setTask } = useState("");
+	const { inputValue, setinputValue } = useState("");
+	const { Task, setTask } = useState([]);
 	return (
 		<div className="contenedor">
 			<input
 				id="myInput"
 				placeholder="Agregar tarea"
-				value={Task}></input>
-			<button className="myBtn">agregar</button>
+				onChange={() => setinputValue(e.target.value)}
+				value={inputValue}></input>
+			<button onClick={() => setTask("blue")} className="myBtn">
+				agregar
+			</button>
 		</div>
 	);
 };
