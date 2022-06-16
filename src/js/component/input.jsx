@@ -24,6 +24,9 @@ const Input = () => {
 						}}
 					/>
 				</li>
+				{Task.map(() => {
+					return <li></li>;
+				})}
 			</ul>
 		</div>
 	);
