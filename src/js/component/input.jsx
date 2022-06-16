@@ -14,9 +14,9 @@ const Input = () => {
 						onChange={() => setinputValue(e.target.value)}
 						value={inputValue}
 						onKeyPress={(e) => {
-							if (e.Key == "Enter") {
+							if (e.Key === "Enter") {
 								setTask(Task.concat(inputValue));
-								setinputValue("");
+								setinputValue(" ");
 							}
 						}}></input>
 				</li>
