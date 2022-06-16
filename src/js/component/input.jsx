@@ -2,8 +2,9 @@ import React from "react";
 import { useState } from "react";
 
 const Input = () => {
-	const { inputValue, setinputValue } = useState("");
-	const { Task, setTask } = useState([]);
+	const [inputValue, setinputValue] = useState("");
+	const [Task, setTask] = useState([]);
+	console.log(inputValue, Task);
 	return (
 		<div className="contenedor">
 			<ul>
@@ -11,18 +12,18 @@ const Input = () => {
 					<input
 						id="myInput"
 						placeholder="Agregar tarea"
-						onChange={() => setinputValue(e.target.value)}
+						onChange={(e) => {
+							setinputValue(e.target.value);
+						}}
 						value={inputValue}
 						onKeyPress={(e) => {
 							if (e.key === "Enter") {
 								setTask(Task.concat(inputValue));
 								setinputValue(" ");
 							}
-						}}></input>
+						}}
+					/>
 				</li>
-				{Task.map((item) => (
-					<li>{item}</li>
-				))}
 			</ul>
 		</div>
 	);
