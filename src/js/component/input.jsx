@@ -14,12 +14,15 @@ const Input = () => {
 						onChange={() => setinputValue(e.target.value)}
 						value={inputValue}
 						onKeyPress={(e) => {
-							if (e.Key === "Enter") {
+							if (e.key === "Enter") {
 								setTask(Task.concat(inputValue));
 								setinputValue(" ");
 							}
 						}}></input>
 				</li>
+				{Task.map((item) => (
+					<li>{item}</li>
+				))}
 			</ul>
 		</div>
 	);
