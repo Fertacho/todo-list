@@ -24,8 +24,22 @@ const Input = () => {
 						}}
 					/>
 				</li>
-				{Task.map((value, key) => {
-					return <li>{value}</li>;
+				{Task.map((value, index) => {
+					return (
+						<li>
+							{value}{" "}
+							<button
+								className="deleter"
+								onClick={() => {
+									return setTask(Task.filter)(
+										(value, currentIndex) =>
+											index !== currentIndex
+									);
+								}}>
+								X
+							</button>
+						</li>
+					);
 				})}
 			</ul>
 		</div>
