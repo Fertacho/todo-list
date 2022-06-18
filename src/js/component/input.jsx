@@ -4,6 +4,7 @@ import { useState } from "react";
 const Input = () => {
 	const [inputValue, setinputValue] = useState("");
 	const [Task, setTask] = useState([]);
+	const deleteTask = (currentTask) => {};
 	console.log(inputValue, Task);
 	return (
 		<div className="contenedor">
@@ -26,16 +27,18 @@ const Input = () => {
 				</li>
 				{Task.map((value, index) => {
 					return (
-						<li>
+						<li key={index}>
 							{value}{" "}
 							<button
 								className="deleter"
-								onClick={() => {
-									return setTask(Task.filter)(
-										(value, currentIndex) =>
-											index !== currentIndex
-									);
-								}}>
+								onClick={() =>
+									setTask(
+										Task.filter(
+											(t, currentIndex) =>
+												index != currentIndex
+										)
+									)
+								}>
 								X
 							</button>
 						</li>
