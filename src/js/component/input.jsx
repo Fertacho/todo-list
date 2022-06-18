@@ -45,6 +45,7 @@ const Input = () => {
 					);
 				})}
 			</ul>
+			<div>{Task.length} Tareas añadidas</div>
 		</div>
 	);
 };
