@@ -9,7 +9,7 @@ const Input = () => {
 	return (
 		<div className="contenedor">
 			<ul>
-				<li>
+				<li className="inputli">
 					<input
 						id="myInput"
 						placeholder="Agregar tarea"
@@ -27,7 +27,7 @@ const Input = () => {
 				</li>
 				{Task.map((value, index) => {
 					return (
-						<li key={index}>
+						<li className="task" key={index}>
 							{value}{" "}
 							<button
 								className="deleter"
@@ -45,7 +45,7 @@ const Input = () => {
 					);
 				})}
 			</ul>
-			<div>{Task.length} Tareas añadidas</div>
+			<div className="tareas">{Task.length} Tareas añadidas</div>
 		</div>
 	);
 };

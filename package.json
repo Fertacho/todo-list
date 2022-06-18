@@ -59,6 +59,7 @@
 		]
 	},
 	"dependencies": {
+		"fortawesome": "^0.0.1-security",
 		"prop-types": "^15.7.2",
 		"query-string": "^7.0.1",
 		"react": "^17.0.2",
